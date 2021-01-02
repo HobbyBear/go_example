@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div contenteditable="true" id="editor">
+    <h2> This text can be edited by the user.</h2>
+</div>
+
+<input type="text"/>
+
+<button id="add">add</button>
+
+</body>
+
+<script>
+    $(function () {
+        $("#add").click(function () {
+            $("#editor").focus()
+            document.execCommand("insertHTML", true, "<h3>123</h3>")
+        })
+
+        var a = function (){
+            this.name = "xxxxx"
+            this.haha =()=>{
+                console.log("haha")
+            }
+        }
+        a.prototype = {
+            name: "xch",
+            print: () => {
+                console.log(a.name)
+            }
+        }
+        console.log(a)
+        console.log(a.prototype.print())
+    });
+</script>
+</html>
