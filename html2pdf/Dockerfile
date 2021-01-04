@@ -1,4 +1,4 @@
-FROM html2pdf
+FROM  html2pdf:v0.2
 MAINTAINER "xiongchuanhong"
 ENV GO111MODULE=on \
     GOPROXY=https://goproxy.cn,direct \
